@@ -29,6 +29,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 html,
@@ -285,6 +286,8 @@ main {
 .grid-live li:nth-child(6) .card { animation-delay: 0.34s; }
 .grid-live li:nth-child(7) .card { animation-delay: 0.4s; }
 .grid-live li:nth-child(8) .card { animation-delay: 0.46s; }
+.grid-live li:nth-child(9) .card { animation-delay: 0.52s; }
+.grid-live li:nth-child(10) .card { animation-delay: 0.58s; }
 
 @keyframes rise {
   from {
@@ -356,7 +359,7 @@ main {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  height: 168px;
+  height: 188px;
   flex-shrink: 0;
   transform: scale(1);
   transition: transform 0.7s var(--ease);
@@ -1098,16 +1101,153 @@ main {
 
 @media (pointer: coarse) {
   .btn {
-    min-height: 52px;
-    font-size: 1rem;
-    padding: 0.85rem 1.15rem;
+    min-height: 56px;
+    font-size: 1.05rem;
+    padding: 0.9rem 1.2rem;
+    border-radius: 14px;
+  }
+
+  .card {
+    border-radius: 22px;
+  }
+
+  .card-body {
+    padding: 1.15rem 1.15rem 1.35rem;
+    gap: 0.55rem;
   }
 
   .card h3 {
-    font-size: 1.85rem;
+    font-size: 2rem;
+    line-height: 1.05;
   }
 
   .blurb {
-    font-size: 1rem;
+    font-size: 1.02rem;
+    line-height: 1.35;
   }
+
+  .art {
+    height: 200px;
+  }
+
+  .genre,
+  .status {
+    font-size: 0.72rem;
+  }
+
+  .section-note {
+    font-size: 0.95rem;
+  }
+
+  .cta-row {
+    gap: 0.7rem;
+  }
+}
+
+/* ~390px phones: one fat column, no sideways scroll */
+@media (max-width: 430px) {
+  main {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+    padding-bottom: max(3.5rem, calc(2.5rem + env(safe-area-inset-bottom)));
+  }
+
+  .hero {
+    padding: 1.6rem 0 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.35rem, 12vw, 3.1rem);
+  }
+
+  .grid {
+    gap: 1.15rem;
+  }
+
+  .topbar-inner {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+}
+
+/* ECO — caverna, pulsos de eco */
+.art-eco {
+  background:
+    radial-gradient(ellipse 55% 45% at 50% 70%, rgba(72, 200, 180, 0.22), transparent 60%),
+    linear-gradient(180deg, #06080c 0%, #101820 55%, #050708 100%);
+}
+.art-eco .cave {
+  inset: 8% 12% 18%;
+  border-radius: 50% 50% 42% 42%;
+  border: 1px solid rgba(120, 200, 190, 0.18);
+  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.55);
+}
+.art-eco .pulse {
+  left: 50%;
+  top: 48%;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid rgba(92, 225, 200, 0.55);
+  transform: translate(-50%, -50%);
+  animation: eco-ring 2.4s ease-out infinite;
+}
+.art-eco .p2 { animation-delay: 0.8s; }
+.art-eco .p3 { animation-delay: 1.6s; }
+.art-eco .listener {
+  left: 50%;
+  bottom: 22%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  background: #7ef0d8;
+  box-shadow: 0 0 16px rgba(126, 240, 216, 0.7);
+}
+@keyframes eco-ring {
+  0% { opacity: 0.7; width: 14px; height: 14px; }
+  100% { opacity: 0; width: 120px; height: 120px; }
+}
+
+/* FRONTEIRA — poeira, madeira, horizonte */
+.art-fronteira {
+  background:
+    radial-gradient(ellipse 70% 40% at 50% 30%, rgba(232, 168, 74, 0.2), transparent 55%),
+    linear-gradient(180deg, #1a1410 0%, #3a2a18 42%, #6b4a28 72%, #2a1c12 100%);
+}
+.art-fronteira .sky {
+  left: 0; right: 0; top: 0; height: 42%;
+  background: linear-gradient(180deg, #2a2218, transparent);
+}
+.art-fronteira .dust {
+  left: 0; right: 0; bottom: 18%; height: 28%;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent 0 8px,
+    rgba(210, 170, 100, 0.12) 8px 10px
+  );
+  opacity: 0.8;
+}
+.art-fronteira .ridge {
+  left: 0; right: 0; bottom: 20%;
+  height: 36%;
+  background: linear-gradient(180deg, transparent, rgba(20, 14, 10, 0.55));
+  clip-path: polygon(0 70%, 18% 40%, 34% 62%, 52% 28%, 70% 58%, 86% 36%, 100% 64%, 100% 100%, 0 100%);
+}
+.art-fronteira .post {
+  left: 62%;
+  bottom: 22%;
+  width: 6px;
+  height: 46%;
+  background: linear-gradient(180deg, #5a3a22, #2a1810);
+  border-radius: 2px;
+}
+.art-fronteira .flag {
+  left: 62%;
+  top: 28%;
+  width: 34px;
+  height: 18px;
+  background: linear-gradient(90deg, #c45a2a, #e08a4a);
+  clip-path: polygon(0 0, 100% 20%, 100% 80%, 0 100%);
+  box-shadow: 0 0 12px rgba(196, 90, 42, 0.35);
 }
