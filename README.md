@@ -14,15 +14,17 @@ Se você clicar em **Jogar**, sai desta página e entra no jogo.
 
 | Jogo | Endereço |
 | --- | --- |
-| TOP RELÂMPAGO (celular) | https://kt3746.github.io/grokbot-top-relampago/celular/?v=polish5 |
-| TOP RELÂMPAGO (PC) | https://kt3746.github.io/grokbot-top-relampago/pc/?v=polish5 |
-| KART | https://kt3746.github.io/grokbot-kart/?v=fix14 |
-| TETROK | https://kt3746.github.io/grokbot-tetrok/?v=42-over |
-| LUTA | https://kt3746.github.io/grokbot-luta/?v=1.6.2 |
-| MERCADINHO | https://kt3746.github.io/grokbot-mercadinho/?v=1dbce1d |
-| 1945 | https://kt3746.github.io/grokbot-1945/?v=1.9.3 |
-| MEMÓRIUM | https://kt3746.github.io/grokbot-memorium/?v=17 |
-| CABANA DE GUERRA | https://kt3746.github.io/grokbot-cabana-de-guerra/?v=1.3.1 |
+| TOP RELÂMPAGO (celular) | https://kt3746.github.io/grokbot-top-relampago/celular/?v=polish6 |
+| TOP RELÂMPAGO (PC) | https://kt3746.github.io/grokbot-top-relampago/pc/?v=polish6 |
+| KART | https://kt3746.github.io/grokbot-kart/?v=fun4 |
+| TETROK | https://kt3746.github.io/grokbot-tetrok/?v=43-polish |
+| LUTA | https://kt3746.github.io/grokbot-luta/?v=1.7.2 |
+| MERCADINHO | https://kt3746.github.io/grokbot-mercadinho/?v=c6539b4 |
+| 1945 | https://kt3746.github.io/grokbot-1945/?v=1.10.0 |
+| MEMÓRIUM | https://kt3746.github.io/grokbot-memorium/?v=18 |
+| CABANA DE GUERRA | https://kt3746.github.io/grokbot-cabana-de-guerra/?v=1.4.2 |
+| ECO | https://kt3746.github.io/grokbot-eco/?v=202609220426 |
+| FRONTEIRA | https://kt3746.github.io/grokbot-fronteira/?v=202609221311 |
 
 ## Arquivos
 
