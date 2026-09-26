@@ -27,11 +27,20 @@
       href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=24" />
+    <link rel="stylesheet" href="styles.css?v=25" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "./js/vendor/three.module.js?v=25"
+        }
+      }
+    </script>
   </head>
   <body>
     <a class="skip" href="#biblioteca">Ir para a biblioteca</a>
 
+    <canvas id="view3d" class="view3d" aria-hidden="true"></canvas>
+    <p id="webgl-fail" class="webgl-fail" hidden role="status"></p>
     <div class="vignette" aria-hidden="true"></div>
     <div class="grain" aria-hidden="true"></div>
 
@@ -346,6 +355,7 @@
       </p>
     </footer>
 
-    <script src="app.js?v=24"></script>
+    <script src="app.js?v=25"></script>
+    <script type="module" src="js/bg3d.js?v=25"></script>
   </body>
 </html>
