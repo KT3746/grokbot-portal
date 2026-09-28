@@ -1253,6 +1253,69 @@ main {
 }
 
 
+
+/* POLÍGONO — alvo, anéis, mira */
+.art-poligono {
+  background:
+    radial-gradient(ellipse 45% 45% at 50% 48%, rgba(232, 90, 74, 0.18), transparent 58%),
+    linear-gradient(180deg, #0c1014 0%, #1a2228 48%, #0a0e12 100%);
+}
+.art-poligono .range {
+  left: 8%;
+  right: 8%;
+  bottom: 14%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(186, 202, 214, 0.35), transparent);
+}
+.art-poligono .ring {
+  left: 50%;
+  top: 48%;
+  border-radius: 50%;
+  border: 1px solid rgba(232, 120, 90, 0.45);
+  transform: translate(-50%, -50%);
+}
+.art-poligono .r1 {
+  width: 92px;
+  height: 92px;
+  opacity: 0.55;
+}
+.art-poligono .r2 {
+  width: 62px;
+  height: 62px;
+  border-color: rgba(232, 140, 90, 0.6);
+}
+.art-poligono .r3 {
+  width: 34px;
+  height: 34px;
+  border-color: rgba(255, 180, 120, 0.75);
+}
+.art-poligono .bull {
+  left: 50%;
+  top: 48%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background: #e85a4a;
+  box-shadow: 0 0 16px rgba(232, 90, 74, 0.75);
+}
+.art-poligono .crossh {
+  left: 28%;
+  right: 28%;
+  top: 48%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(232, 200, 160, 0.55), transparent);
+  transform: translateY(-50%);
+}
+.art-poligono .crossv {
+  top: 22%;
+  bottom: 28%;
+  left: 50%;
+  width: 1px;
+  background: linear-gradient(180deg, transparent, rgba(232, 200, 160, 0.55), transparent);
+  transform: translateX(-50%);
+}
+
 /* Three.js ambient backdrop (r160) */
 .view3d {
   position: fixed;
