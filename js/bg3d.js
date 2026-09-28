@@ -3,7 +3,7 @@
  * Cartões e UI ficam em HTML — aqui só o cenário atrás.
  * Three.js via importmap → js/vendor/three.module.js (r160).
  */
-import * as THREE from "three";
+let THREE;
 
 export const FAIL_PT =
   "Não foi possível iniciar o fundo 3D. O portal continua no visual clássico (2D).";
@@ -191,6 +191,18 @@ class PortalBg {
         this.startLoop();
       }
     });
+    if (this.view) {
+      this.view.addEventListener(
+        "webglcontextlost",
+        (e) => {
+          e.preventDefault();
+          this.stopLoop(true);
+          this.ok = false;
+          useFallback(this.view, document.getElementById("webgl-fail"), FAIL_PT);
+        },
+        false
+      );
+    }
   }
 
   startLoop() {
@@ -243,6 +255,9 @@ export async function bootPortalBg3D() {
       canvasTest.getContext("webgl", { failIfMajorPerformanceCaveat: false });
     if (!gl) throw new Error("no-webgl");
 
+    THREE = await import("three");
+    if (!THREE?.WebGLRenderer) throw new Error("no-three");
+
     const bg = new PortalBg(view3d);
     if (!bg.ok) throw new Error("three-init-failed");
     document.body.classList.add("renderer-webgl", "has-webgl-bg");
@@ -256,4 +271,7 @@ export async function bootPortalBg3D() {
   }
 }
 
-bootPortalBg3D();
+bootPortalBg3D().catch((err) => {
+  console.warn("[portal-bg3d]", err);
+  useFallback(document.getElementById("view3d"), document.getElementById("webgl-fail"), FAIL_PT);
+});
