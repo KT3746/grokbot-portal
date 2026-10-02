@@ -23,7 +23,7 @@ Se você clicar em **Jogar**, sai desta página e entra no jogo.
 | 1945 | https://kt3746.github.io/grokbot-1945/?v=1.10.0 |
 | MEMÓRIUM | https://kt3746.github.io/grokbot-memorium/?v=18 |
 | CABANA DE GUERRA | https://kt3746.github.io/grokbot-cabana-de-guerra/?v=1.4.2 |
-| ECO | https://kt3746.github.io/grokbot-eco/?v=202609220426 |
+| ECO | https://kt3746.github.io/grokbot-eco/?v=202610012323 |
 | FRONTEIRA | https://kt3746.github.io/grokbot-fronteira/?v=202609221311 |
 
 ## Arquivos
