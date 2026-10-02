@@ -27,12 +27,12 @@
       href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=40" />
-    <link rel="stylesheet" href="hub-mobile.css?v=40" />
+    <link rel="stylesheet" href="styles.css?v=41" />
+    <link rel="stylesheet" href="hub-mobile.css?v=41" />
     <script type="importmap">
       {
         "imports": {
-          "three": "./js/vendor/three.module.js?v=40"
+          "three": "./js/vendor/three.module.js?v=41"
         }
       }
     </script>
@@ -64,11 +64,22 @@
         </p>
       </section>
 
+
+      <aside id="hub-tip" class="hub-tip" role="status" hidden>
+        <p>Escolha um jogo — toque no card</p>
+        <button type="button" class="hub-tip-dismiss" aria-label="Dispensar dica">Entendi</button>
+      </aside>
+
       <section id="biblioteca" class="library" aria-labelledby="live-heading">
         <div class="section-head">
           <h2 id="live-heading">Disponível agora</h2>
-          <p class="section-note">11 jogos no ar. Toque na carta para jogar. TOP RELÂMPAGO: botão grande “Jogar no celular”.</p>
+          <p class="section-note">11 jogos no ar. Toque na carta para jogar (abre em nova aba). TOP RELÂMPAGO: botão grande “Jogar no celular”.</p>
         </div>
+
+        <p class="mobile-play-note" role="note">
+          <strong>No celular:</strong> use o botão grande <em>Jogar no celular</em> em TOP RELÂMPAGO; nos outros, toque no card.
+        </p>
+
 
         <ul class="grid grid-live">
           <li>
@@ -92,13 +103,11 @@
                   <a
                     class="btn btn-primary btn-celular"
                     href="https://kt3746.github.io/grokbot-top-relampago/celular/?v=202610012319"
-                    >Jogar no celular</a
-                  >
+                     target="_blank" rel="noopener noreferrer">Jogar no celular</a>
                   <a
                     class="btn btn-ghost"
                     href="https://kt3746.github.io/grokbot-top-relampago/pc/?v=202610012319"
-                    >Abrir versão PC</a
-                  >
+                     target="_blank" rel="noopener noreferrer">Abrir versão PC</a>
                 </div>
               </div>
             </article>
@@ -110,7 +119,7 @@
                 class="card-hit"
                 href="https://kt3746.github.io/grokbot-kart/?v=202610012303"
                 aria-labelledby="title-kart"
-              >
+               target="_blank" rel="noopener noreferrer">
                 <div class="art art-pista" aria-hidden="true">
                   <span class="track"></span>
                   <span class="cone c1"></span>
@@ -136,7 +145,7 @@
                 class="card-hit"
                 href="https://kt3746.github.io/grokbot-tetrok/?v=202610012306"
                 aria-labelledby="title-tetrok"
-              >
+               target="_blank" rel="noopener noreferrer">
                 <div class="art art-queda" aria-hidden="true">
                   <span class="well"></span>
                   <span class="bar b1"></span>
@@ -163,7 +172,7 @@
                 class="card-hit"
                 href="https://kt3746.github.io/grokbot-luta/?v=202610012310"
                 aria-labelledby="title-luta"
-              >
+               target="_blank" rel="noopener noreferrer">
                 <div class="art art-duelo" aria-hidden="true">
                   <span class="ring r1"></span>
                   <span class="ring r2"></span>
@@ -190,7 +199,7 @@
                 class="card-hit"
                 href="https://kt3746.github.io/grokbot-mercadinho/?v=202610012314"
                 aria-labelledby="title-mercadinho"
-              >
+               target="_blank" rel="noopener noreferrer">
                 <div class="art art-balcao" aria-hidden="true">
                   <span class="lamp"></span>
                   <span class="shelf"></span>
@@ -216,7 +225,7 @@
                 class="card-hit"
                 href="https://kt3746.github.io/grokbot-1945/?v=202610012318"
                 aria-labelledby="title-1945"
-              >
+               target="_blank" rel="noopener noreferrer">
                 <div class="art art-ceu" aria-hidden="true">
                   <span class="vapor v1"></span>
                   <span class="vapor v2"></span>
@@ -243,9 +252,9 @@
             <article class="card card-live" data-tilt>
               <a
                 class="card-hit"
-                href="https://kt3746.github.io/grokbot-poligono/?v=202609290134"
+                href="https://kt3746.github.io/grokbot-poligono/?v=202610012330"
                 aria-labelledby="title-poligono"
-              >
+               target="_blank" rel="noopener noreferrer">
                 <div class="art art-poligono" aria-hidden="true">
                   <span class="range"></span>
                   <span class="ring r1"></span>
@@ -276,7 +285,7 @@
                 class="card-hit"
                 href="https://kt3746.github.io/grokbot-memorium/?v=202610012256"
                 aria-labelledby="title-memorium"
-              >
+               target="_blank" rel="noopener noreferrer">
                 <div class="art art-memorium" aria-hidden="true">
                   <span class="card-a"></span>
                   <span class="card-b"></span>
@@ -303,7 +312,7 @@
                 class="card-hit"
                 href="https://kt3746.github.io/grokbot-cabana-de-guerra/?v=202610012300"
                 aria-labelledby="title-cabana-guerra"
-              >
+               target="_blank" rel="noopener noreferrer">
                 <div class="art art-cabana" aria-hidden="true">
                   <span class="moon"></span>
                   <span class="trees"></span>
@@ -330,7 +339,7 @@
                 class="card-hit"
                 href="https://kt3746.github.io/grokbot-eco/?v=202610012323"
                 aria-labelledby="title-eco"
-              >
+               target="_blank" rel="noopener noreferrer">
                 <div class="art art-eco" aria-hidden="true">
                   <span class="cave"></span>
                   <span class="pulse p1"></span>
@@ -357,7 +366,7 @@
                 class="card-hit"
                 href="https://kt3746.github.io/grokbot-fronteira/?v=202610012326"
                 aria-labelledby="title-fronteira"
-              >
+               target="_blank" rel="noopener noreferrer">
                 <div class="art art-fronteira" aria-hidden="true">
                   <span class="sky"></span>
                   <span class="dust"></span>
@@ -383,11 +392,11 @@
 
     <footer class="site-foot">
       <p>
-        Este site é só um hub de links. Nenhum jogo roda aqui — cada título abre na própria página.
+        Este site é só um hub de links. Nenhum jogo roda aqui — cada título abre em nova aba na própria página.
       </p>
     </footer>
 
-    <script src="app.js?v=40"></script>
-    <script type="module" src="js/bg3d.js?v=40"></script>
+    <script src="app.js?v=41"></script>
+    <script type="module" src="js/bg3d.js?v=41"></script>
   </body>
 </html>

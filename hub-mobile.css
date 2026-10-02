@@ -152,3 +152,22 @@ main,
     width: auto;
   }
 }
+
+
+/* v41 — touch-friendly cards + sticky celular note spacing */
+@media (pointer: coarse) {
+  .card,
+  .card-hit,
+  .card-press {
+    min-height: 44px;
+  }
+
+  .hub-tip {
+    position: relative;
+    z-index: 5;
+  }
+
+  .mobile-play-note {
+    margin-bottom: 1.25rem;
+  }
+}

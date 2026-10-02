@@ -1367,3 +1367,148 @@ main,
   position: relative;
   z-index: 1;
 }
+
+
+/* === portal polish final (v41) === */
+
+.hub-tip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.85rem;
+  margin: 0 0 1.25rem;
+  padding: 0.85rem 1rem;
+  border-radius: 14px;
+  border: 1px solid rgba(92, 225, 230, 0.28);
+  background: linear-gradient(135deg, rgba(92, 225, 230, 0.12), rgba(20, 24, 36, 0.85));
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
+  color: var(--text, #e8eef7);
+  font-size: 0.98rem;
+  line-height: 1.35;
+}
+
+.hub-tip[hidden] {
+  display: none !important;
+}
+
+.hub-tip p {
+  margin: 0;
+  font-weight: 500;
+}
+
+.hub-tip-dismiss {
+  flex-shrink: 0;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0.55rem 0.95rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(8, 10, 16, 0.55);
+  color: inherit;
+  font: inherit;
+  font-weight: 600;
+  font-size: 0.88rem;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.hub-tip-dismiss:hover,
+.hub-tip-dismiss:focus-visible {
+  border-color: rgba(92, 225, 230, 0.55);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(92, 225, 230, 0.35);
+}
+
+.mobile-play-note {
+  display: none;
+  margin: 0 0 1.15rem;
+  padding: 0.75rem 0.95rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(12, 14, 22, 0.72);
+  color: rgba(232, 238, 247, 0.88);
+  font-size: 0.92rem;
+  line-height: 1.4;
+}
+
+.mobile-play-note strong {
+  color: var(--accent, #5ce1e6);
+  font-weight: 600;
+}
+
+.mobile-play-note em {
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* Card press juice */
+.card-press {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  min-height: 44px;
+}
+
+.card-press.is-pressed {
+  transform: translateY(0) scale(0.978);
+  transition: transform 0.12s ease-out;
+}
+
+.card-ripple {
+  position: absolute;
+  z-index: 4;
+  width: 12px;
+  height: 12px;
+  margin: -6px 0 0 -6px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(92, 225, 230, 0.45), rgba(92, 225, 230, 0) 70%);
+  animation: card-ripple-out 0.55s ease-out forwards;
+}
+
+@keyframes card-ripple-out {
+  from {
+    transform: scale(0.4);
+    opacity: 0.85;
+  }
+  to {
+    transform: scale(18);
+    opacity: 0;
+  }
+}
+
+.card-hit,
+.card .btn,
+.cta-row .btn {
+  min-height: 44px;
+}
+
+@media (pointer: coarse) {
+  .mobile-play-note {
+    display: block;
+    position: sticky;
+    top: calc(3.4rem + env(safe-area-inset-top, 0px));
+    z-index: 6;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .card-press,
+  .card-hit {
+    min-height: 44px;
+  }
+
+  .card-body {
+    min-height: 44px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-press.is-pressed {
+    transform: none;
+  }
+
+  .card-ripple {
+    display: none !important;
+    animation: none !important;
+  }
+}
