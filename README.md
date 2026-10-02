@@ -19,7 +19,7 @@ Se você clicar em **Jogar**, sai desta página e entra no jogo.
 | KART | https://kt3746.github.io/grokbot-kart/?v=fun4 |
 | TETROK | https://kt3746.github.io/grokbot-tetrok/?v=43-polish |
 | LUTA | https://kt3746.github.io/grokbot-luta/?v=1.7.2 |
-| MERCADINHO | https://kt3746.github.io/grokbot-mercadinho/?v=c6539b4 |
+| MERCADINHO | https://kt3746.github.io/grokbot-mercadinho/?v=202610012314 |
 | 1945 | https://kt3746.github.io/grokbot-1945/?v=1.10.0 |
 | MEMÓRIUM | https://kt3746.github.io/grokbot-memorium/?v=18 |
 | CABANA DE GUERRA | https://kt3746.github.io/grokbot-cabana-de-guerra/?v=1.4.2 |
