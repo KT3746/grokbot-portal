@@ -19,7 +19,7 @@ Se você clicar em **Jogar**, sai desta página e entra no jogo (nova aba).
 | KART | https://kt3746.github.io/grokbot-kart/?v=202610020141 |
 | TETROK | https://kt3746.github.io/grokbot-tetrok/?v=202610020143 |
 | LUTA | https://kt3746.github.io/grokbot-luta/?v=202610020146 |
-| MERCADINHO | https://kt3746.github.io/grokbot-mercadinho/?v=202610012314 |
+| MERCADINHO | https://kt3746.github.io/grokbot-mercadinho/?v=202610020150 |
 | 1945 | https://kt3746.github.io/grokbot-1945/?v=202610012318 |
 | POLÍGONO | https://kt3746.github.io/grokbot-poligono/?v=202610012330 |
 | MEMÓRIUM | https://kt3746.github.io/grokbot-memorium/?v=202610020137 |
