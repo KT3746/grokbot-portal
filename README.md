@@ -16,7 +16,7 @@ Se você clicar em **Jogar**, sai desta página e entra no jogo (nova aba).
 | --- | --- |
 | TOP RELÂMPAGO (celular) | https://kt3746.github.io/grokbot-top-relampago/celular/?v=202610012319 |
 | TOP RELÂMPAGO (PC) | https://kt3746.github.io/grokbot-top-relampago/pc/?v=202610012319 |
-| KART | https://kt3746.github.io/grokbot-kart/?v=202610012303 |
+| KART | https://kt3746.github.io/grokbot-kart/?v=202610020141 |
 | TETROK | https://kt3746.github.io/grokbot-tetrok/?v=202610012306 |
 | LUTA | https://kt3746.github.io/grokbot-luta/?v=202610012310 |
 | MERCADINHO | https://kt3746.github.io/grokbot-mercadinho/?v=202610012314 |
