@@ -21,7 +21,7 @@ Se você clicar em **Jogar**, sai desta página e entra no jogo (nova aba).
 | LUTA | https://kt3746.github.io/grokbot-luta/?v=202610020146 |
 | MERCADINHO | https://kt3746.github.io/grokbot-mercadinho/?v=202610020150 |
 | 1945 | https://kt3746.github.io/grokbot-1945/?v=202610020153 |
-| POLÍGONO | https://kt3746.github.io/grokbot-poligono/?v=202610012330 |
+| POLÍGONO | https://kt3746.github.io/grokbot-poligono/?v=202610020211 |
 | MEMÓRIUM | https://kt3746.github.io/grokbot-memorium/?v=202610020137 |
 | CABANA DE GUERRA | https://kt3746.github.io/grokbot-cabana-de-guerra/?v=202610020205 |
 | ECO | https://kt3746.github.io/grokbot-eco/?v=202610020205 |
@@ -32,6 +32,6 @@ Se você clicar em **Jogar**, sai desta página e entra no jogo (nova aba).
 - `index.html` — estrutura da página
 - `styles.css` — visual
 - `hub-mobile.css` — ajustes de toque / safe-area
-- `app.js` — dica de primeira visita, press juice, tilt no desktop
+- `app.js` — dica, press juice, tilt; wave2: jogados hoje, chips de gênero, Surpresa
 - `js/bg3d.js` — fundo 3D (pausa fora da aba)
 - `.github/workflows/pages.yml` — publica o site no GitHub Pages

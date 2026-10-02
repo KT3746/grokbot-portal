@@ -27,12 +27,12 @@
       href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=51" />
-    <link rel="stylesheet" href="hub-mobile.css?v=51" />
+    <link rel="stylesheet" href="styles.css?v=52" />
+    <link rel="stylesheet" href="hub-mobile.css?v=52" />
     <script type="importmap">
       {
         "imports": {
-          "three": "./js/vendor/three.module.js?v=51"
+          "three": "./js/vendor/three.module.js?v=52"
         }
       }
     </script>
@@ -81,9 +81,28 @@
         </p>
 
 
+
+        <div class="hub-toolbar" role="toolbar" aria-label="Filtrar e surpresa">
+          <div class="genre-chips" role="group" aria-label="Filtrar por gênero">
+            <button type="button" class="chip is-active" data-filter="todos" aria-pressed="true">Todos</button>
+            <button type="button" class="chip" data-filter="corrida" aria-pressed="false">Corrida</button>
+            <button type="button" class="chip" data-filter="encaixe" aria-pressed="false">Encaixe</button>
+            <button type="button" class="chip" data-filter="duelo" aria-pressed="false">Duelo</button>
+            <button type="button" class="chip" data-filter="loja" aria-pressed="false">Loja</button>
+            <button type="button" class="chip" data-filter="arcade" aria-pressed="false">Arcade</button>
+            <button type="button" class="chip" data-filter="tiro" aria-pressed="false">Tiro</button>
+            <button type="button" class="chip" data-filter="memoria" aria-pressed="false">Memória</button>
+            <button type="button" class="chip" data-filter="sobrevivencia" aria-pressed="false">Sobrevivência</button>
+            <button type="button" class="chip" data-filter="exploracao" aria-pressed="false">Exploração</button>
+            <button type="button" class="chip" data-filter="fronteira" aria-pressed="false">Fronteira</button>
+          </div>
+          <button type="button" class="btn-surpresa" id="hub-surpresa" aria-label="Abrir um jogo aleatório">Surpresa</button>
+        </div>
+        <p id="hub-played-note" class="hub-played-note" hidden role="status"></p>
+
         <ul class="grid grid-live">
           <li>
-            <article class="card card-live" data-tilt>
+            <article class="card card-live" data-tilt data-game="top-relampago" data-genre="corrida">
               <div class="art art-relampago" aria-hidden="true">
                 <span class="horizon"></span>
                 <span class="road"></span>
@@ -98,7 +117,7 @@
                   <span class="status status-live">No ar · Celular</span>
                 </div>
                 <h3 id="title-relampago">TOP RELÂMPAGO</h3>
-                <p class="blurb">A pista vem até você. Vire o celular de lado e corra.</p>
+                <p class="blurb">Horizonte que se aproxima. Deite o celular e acelere.</p>
                 <div class="cta-row">
                   <a
                     class="btn btn-primary btn-celular"
@@ -114,7 +133,7 @@
           </li>
 
           <li>
-            <article class="card card-live" data-tilt>
+            <article class="card card-live" data-tilt data-game="kart" data-genre="corrida">
               <a
                 class="card-hit"
                 href="https://kt3746.github.io/grokbot-kart/?v=202610020141"
@@ -132,7 +151,7 @@
                     <span class="status status-live">No ar</span>
                   </div>
                   <h3 id="title-kart">KART</h3>
-                  <p class="blurb">Terceira pessoa, asfalto com peso, drift no grid.</p>
+                  <p class="blurb">Asfalto com peso. Drift no grid — terceira pessoa.</p>
                   <span class="btn btn-primary" aria-hidden="true">Jogar</span>
                 </div>
               </a>
@@ -140,7 +159,7 @@
           </li>
 
           <li>
-            <article class="card card-live" data-tilt>
+            <article class="card card-live" data-tilt data-game="tetrok" data-genre="encaixe">
               <a
                 class="card-hit"
                 href="https://kt3746.github.io/grokbot-tetrok/?v=202610020143"
@@ -159,7 +178,7 @@
                     <span class="status status-live">No ar</span>
                   </div>
                   <h3 id="title-tetrok">TETROK</h3>
-                  <p class="blurb">Encaixe. Limpe. Suba de nível.</p>
+                  <p class="blurb">Peças que caem. Limpe linhas. Suba o nível.</p>
                   <span class="btn btn-primary" aria-hidden="true">Jogar</span>
                 </div>
               </a>
@@ -167,7 +186,7 @@
           </li>
 
           <li>
-            <article class="card card-live" data-tilt>
+            <article class="card card-live" data-tilt data-game="luta" data-genre="duelo">
               <a
                 class="card-hit"
                 href="https://kt3746.github.io/grokbot-luta/?v=202610020146"
@@ -186,7 +205,7 @@
                     <span class="status status-live">No ar</span>
                   </div>
                   <h3 id="title-luta">LUTA</h3>
-                  <p class="blurb">Um turno. Uma escolha. Dez rivais.</p>
+                  <p class="blurb">Um turno. Uma escolha. Dez rivais no ringue.</p>
                   <span class="btn btn-primary" aria-hidden="true">Jogar</span>
                 </div>
               </a>
@@ -194,7 +213,7 @@
           </li>
 
           <li>
-            <article class="card card-live" data-tilt>
+            <article class="card card-live" data-tilt data-game="mercadinho" data-genre="loja">
               <a
                 class="card-hit"
                 href="https://kt3746.github.io/grokbot-mercadinho/?v=202610020150"
@@ -212,7 +231,7 @@
                     <span class="status status-live">No ar</span>
                   </div>
                   <h3 id="title-mercadinho">MERCADINHO</h3>
-                  <p class="blurb">A loja não para. Atenda rápido — ou o caos toma o turno.</p>
+                  <p class="blurb">Fila que não para. Atenda rápido — ou o caos toma o turno.</p>
                   <span class="btn btn-primary" aria-hidden="true">Jogar</span>
                 </div>
               </a>
@@ -220,7 +239,7 @@
           </li>
 
           <li>
-            <article class="card card-live" data-tilt>
+            <article class="card card-live" data-tilt data-game="1945" data-genre="arcade">
               <a
                 class="card-hit"
                 href="https://kt3746.github.io/grokbot-1945/?v=202610020153"
@@ -240,7 +259,7 @@
                     <span class="status status-live">No ar</span>
                   </div>
                   <h3 id="title-1945">1945</h3>
-                  <p class="blurb">Avião arcade. Dispare, desvie — o céu não perdoa.</p>
+                  <p class="blurb">Dispare, desvie, sobreviva — o céu arcade não perdoa.</p>
                   <span class="btn btn-primary" aria-hidden="true">Jogar</span>
                 </div>
               </a>
@@ -249,10 +268,10 @@
 
 
           <li>
-            <article class="card card-live" data-tilt>
+            <article class="card card-live" data-tilt data-game="poligono" data-genre="tiro">
               <a
                 class="card-hit"
-                href="https://kt3746.github.io/grokbot-poligono/?v=202610012330"
+                href="https://kt3746.github.io/grokbot-poligono/?v=202610020211"
                 aria-labelledby="title-poligono"
                target="_blank" rel="noopener noreferrer">
                 <div class="art art-poligono" aria-hidden="true">
@@ -270,7 +289,7 @@
                     <span class="status status-live">No ar</span>
                   </div>
                   <h3 id="title-poligono">POLÍGONO</h3>
-                  <p class="blurb">Polígono de tiro. Mire no centro — precisão e combo.</p>
+                  <p class="blurb">Alvos no polígono. Mire no centro — precisão e combo.</p>
                   <span class="btn btn-primary" aria-hidden="true">Jogar</span>
                 </div>
               </a>
@@ -280,7 +299,7 @@
 
 
           <li>
-            <article class="card card-live" data-tilt>
+            <article class="card card-live" data-tilt data-game="memorium" data-genre="memoria">
               <a
                 class="card-hit"
                 href="https://kt3746.github.io/grokbot-memorium/?v=202610020137"
@@ -299,7 +318,7 @@
                     <span class="status status-live">No ar</span>
                   </div>
                   <h3 id="title-memorium">MEMÓRIUM</h3>
-                  <p class="blurb">Vire pares, domine o relógio — mente afiada.</p>
+                  <p class="blurb">Vire pares, bata o relógio — memória afiada.</p>
                   <span class="btn btn-primary" aria-hidden="true">Jogar</span>
                 </div>
               </a>
@@ -307,7 +326,7 @@
           </li>
 
           <li>
-            <article class="card card-live" data-tilt>
+            <article class="card card-live" data-tilt data-game="cabana" data-genre="sobrevivencia">
               <a
                 class="card-hit"
                 href="https://kt3746.github.io/grokbot-cabana-de-guerra/?v=202610020205"
@@ -326,7 +345,7 @@
                     <span class="status status-live">No ar</span>
                   </div>
                   <h3 id="title-cabana-guerra">CABANA DE GUERRA</h3>
-                  <p class="blurb">Plante de dia. Defenda a cabana à noite.</p>
+                  <p class="blurb">Plante de dia. Aguente a noite na cabana.</p>
                   <span class="btn btn-primary" aria-hidden="true">Jogar</span>
                 </div>
               </a>
@@ -334,7 +353,7 @@
           </li>
 
           <li>
-            <article class="card card-live" data-tilt>
+            <article class="card card-live" data-tilt data-game="eco" data-genre="exploracao">
               <a
                 class="card-hit"
                 href="https://kt3746.github.io/grokbot-eco/?v=202610020205"
@@ -353,7 +372,7 @@
                     <span class="status status-live">No ar</span>
                   </div>
                   <h3 id="title-eco">ECO</h3>
-                  <p class="blurb">Caverna no escuro. Ouça o eco e ache o caminho.</p>
+                  <p class="blurb">Escuro na caverna. Ouça o eco e ache a saída.</p>
                   <span class="btn btn-primary" aria-hidden="true">Jogar</span>
                 </div>
               </a>
@@ -361,7 +380,7 @@
           </li>
 
           <li>
-            <article class="card card-live" data-tilt>
+            <article class="card card-live" data-tilt data-game="fronteira" data-genre="fronteira">
               <a
                 class="card-hit"
                 href="https://kt3746.github.io/grokbot-fronteira/?v=202610020208"
@@ -380,7 +399,7 @@
                     <span class="status status-live">No ar</span>
                   </div>
                   <h3 id="title-fronteira">FRONTEIRA</h3>
-                  <p class="blurb">Poeira, madeira e gente dura na beira do mapa.</p>
+                  <p class="blurb">Poeira e madeira. Gente dura na beira do mapa.</p>
                   <span class="btn btn-primary" aria-hidden="true">Jogar</span>
                 </div>
               </a>
@@ -396,7 +415,7 @@
       </p>
     </footer>
 
-    <script src="app.js?v=51"></script>
-    <script type="module" src="js/bg3d.js?v=51"></script>
+    <script src="app.js?v=52"></script>
+    <script type="module" src="js/bg3d.js?v=52"></script>
   </body>
 </html>
