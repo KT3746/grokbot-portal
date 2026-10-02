@@ -14,8 +14,8 @@ Se você clicar em **Jogar**, sai desta página e entra no jogo.
 
 | Jogo | Endereço |
 | --- | --- |
-| TOP RELÂMPAGO (celular) | https://kt3746.github.io/grokbot-top-relampago/celular/?v=polish6 |
-| TOP RELÂMPAGO (PC) | https://kt3746.github.io/grokbot-top-relampago/pc/?v=polish6 |
+| TOP RELÂMPAGO (celular) | https://kt3746.github.io/grokbot-top-relampago/celular/?v=202610012319 |
+| TOP RELÂMPAGO (PC) | https://kt3746.github.io/grokbot-top-relampago/pc/?v=202610012319 |
 | KART | https://kt3746.github.io/grokbot-kart/?v=fun4 |
 | TETROK | https://kt3746.github.io/grokbot-tetrok/?v=43-polish |
 | LUTA | https://kt3746.github.io/grokbot-luta/?v=1.7.2 |
