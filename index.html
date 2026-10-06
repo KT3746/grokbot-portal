@@ -27,12 +27,12 @@
       href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=54" />
-    <link rel="stylesheet" href="hub-mobile.css?v=54" />
+    <link rel="stylesheet" href="styles.css?v=55" />
+    <link rel="stylesheet" href="hub-mobile.css?v=55" />
     <script type="importmap">
       {
         "imports": {
-          "three": "./js/vendor/three.module.js?v=54"
+          "three": "./js/vendor/three.module.js?v=55"
         }
       }
     </script>
@@ -66,14 +66,14 @@
 
 
       <aside id="hub-tip" class="hub-tip" role="status" hidden>
-        <p>Toque num card para jogar. Use <strong>Continuar</strong> ou <strong>Surpresa</strong>.</p>
+        <p>Onda 4 nos 11 jogos. Toque no ★ pra favoritar. Use <strong>Continuar</strong>, <strong>Ordenar</strong> ou <strong>Surpresa</strong>.</p>
         <button type="button" class="hub-tip-dismiss" aria-label="Dispensar dica">Entendi</button>
       </aside>
 
       <section id="biblioteca" class="library" aria-labelledby="live-heading">
         <div class="section-head">
           <h2 id="live-heading">Disponível agora</h2>
-          <p class="section-note">11 jogos no ar. Toque na carta para jogar (abre em nova aba). Cards com selo <strong>Novo</strong> receberam a onda 3.</p>
+          <p class="section-note">11 jogos no ar. Toque na carta para jogar (abre em nova aba). Cards com selo <strong>Novo</strong> receberam a onda 4.</p>
         </div>
 
         <p class="mobile-play-note" role="note">
@@ -83,16 +83,28 @@
 
 
         <aside id="hub-continuar" class="hub-continuar" hidden>
+          <div class="hub-continuar-glow" aria-hidden="true"></div>
           <div class="hub-continuar-inner">
-            <p class="hub-continuar-label">Continuar</p>
+            <p class="hub-continuar-label">Continuar · último jogo</p>
             <p id="hub-continuar-name" class="hub-continuar-name"></p>
+            <p id="hub-continuar-blurb" class="hub-continuar-blurb"></p>
           </div>
           <button type="button" class="btn btn-primary hub-continuar-btn" id="hub-continuar-btn">Jogar de novo</button>
         </aside>
 
+        <div class="hub-sortbar" role="toolbar" aria-label="Ordenar biblioteca">
+          <span class="hub-sort-label">Ordenar</span>
+          <div class="hub-sort-chips" role="group" aria-label="Critério de ordem">
+            <button type="button" class="chip chip-sort is-active" data-sort="fresh" aria-pressed="true">Novo</button>
+            <button type="button" class="chip chip-sort" data-sort="az" aria-pressed="false">A–Z</button>
+            <button type="button" class="chip chip-sort" data-sort="recent" aria-pressed="false">Recente</button>
+          </div>
+        </div>
+
         <div class="hub-toolbar" role="toolbar" aria-label="Filtrar e surpresa">
           <div class="genre-chips" role="group" aria-label="Filtrar por gênero">
             <button type="button" class="chip is-active" data-filter="todos" aria-pressed="true">Todos</button>
+            <button type="button" class="chip chip-fav" data-filter="favoritos" aria-pressed="false" title="Só favoritos">★ Favoritos</button>
             <button type="button" class="chip" data-filter="corrida" aria-pressed="false">Corrida</button>
             <button type="button" class="chip" data-filter="encaixe" aria-pressed="false">Encaixe</button>
             <button type="button" class="chip" data-filter="duelo" aria-pressed="false">Duelo</button>
@@ -130,11 +142,11 @@
                 <div class="cta-row">
                   <a
                     class="btn btn-primary btn-celular"
-                    href="https://kt3746.github.io/grokbot-top-relampago/celular/?v=202610052042"
+                    href="https://kt3746.github.io/grokbot-top-relampago/celular/?v=202610060510"
                      target="_blank" rel="noopener noreferrer">Jogar no celular</a>
                   <a
                     class="btn btn-ghost"
-                    href="https://kt3746.github.io/grokbot-top-relampago/pc/?v=202610052042"
+                    href="https://kt3746.github.io/grokbot-top-relampago/pc/?v=202610060510"
                      target="_blank" rel="noopener noreferrer">Abrir versão PC</a>
                 </div>
               </div>
@@ -145,7 +157,7 @@
             <article class="card card-live" data-tilt data-game="kart" data-fresh="1" data-genre="corrida">
               <a
                 class="card-hit"
-                href="https://kt3746.github.io/grokbot-kart/?v=202610051930"
+                href="https://kt3746.github.io/grokbot-kart/?v=202610060445"
                 aria-labelledby="title-kart"
                target="_blank" rel="noopener noreferrer">
                 <div class="art art-pista" aria-hidden="true">
@@ -171,7 +183,7 @@
             <article class="card card-live" data-tilt data-game="tetrok" data-fresh="1" data-genre="encaixe">
               <a
                 class="card-hit"
-                href="https://kt3746.github.io/grokbot-tetrok/?v=202610052030"
+                href="https://kt3746.github.io/grokbot-tetrok/?v=202610060450"
                 aria-labelledby="title-tetrok"
                target="_blank" rel="noopener noreferrer">
                 <div class="art art-queda" aria-hidden="true">
@@ -198,7 +210,7 @@
             <article class="card card-live" data-tilt data-game="luta" data-fresh="1" data-genre="duelo">
               <a
                 class="card-hit"
-                href="https://kt3746.github.io/grokbot-luta/?v=202610052040"
+                href="https://kt3746.github.io/grokbot-luta/?v=202610060530"
                 aria-labelledby="title-luta"
                target="_blank" rel="noopener noreferrer">
                 <div class="art art-duelo" aria-hidden="true">
@@ -225,7 +237,7 @@
             <article class="card card-live" data-tilt data-game="mercadinho" data-fresh="1" data-genre="loja">
               <a
                 class="card-hit"
-                href="https://kt3746.github.io/grokbot-mercadinho/?v=202610052020"
+                href="https://kt3746.github.io/grokbot-mercadinho/?v=202610060515"
                 aria-labelledby="title-mercadinho"
                target="_blank" rel="noopener noreferrer">
                 <div class="art art-balcao" aria-hidden="true">
@@ -251,7 +263,7 @@
             <article class="card card-live" data-tilt data-game="1945" data-fresh="1" data-genre="arcade">
               <a
                 class="card-hit"
-                href="https://kt3746.github.io/grokbot-1945/?v=202610052100"
+                href="https://kt3746.github.io/grokbot-1945/?v=202610060455"
                 aria-labelledby="title-1945"
                target="_blank" rel="noopener noreferrer">
                 <div class="art art-ceu" aria-hidden="true">
@@ -280,7 +292,7 @@
             <article class="card card-live" data-tilt data-game="poligono" data-fresh="1" data-genre="tiro">
               <a
                 class="card-hit"
-                href="https://kt3746.github.io/grokbot-poligono/?v=202610052100"
+                href="https://kt3746.github.io/grokbot-poligono/?v=202610060545"
                 aria-labelledby="title-poligono"
                target="_blank" rel="noopener noreferrer">
                 <div class="art art-poligono" aria-hidden="true">
@@ -311,7 +323,7 @@
             <article class="card card-live" data-tilt data-game="memorium" data-fresh="1" data-genre="memoria">
               <a
                 class="card-hit"
-                href="https://kt3746.github.io/grokbot-memorium/?v=202610052130"
+                href="https://kt3746.github.io/grokbot-memorium/?v=202610060545"
                 aria-labelledby="title-memorium"
                target="_blank" rel="noopener noreferrer">
                 <div class="art art-memorium" aria-hidden="true">
@@ -338,7 +350,7 @@
             <article class="card card-live" data-tilt data-game="cabana" data-fresh="1" data-genre="sobrevivencia">
               <a
                 class="card-hit"
-                href="https://kt3746.github.io/grokbot-cabana-de-guerra/?v=202610052046"
+                href="https://kt3746.github.io/grokbot-cabana-de-guerra/?v=202610060508"
                 aria-labelledby="title-cabana-guerra"
                target="_blank" rel="noopener noreferrer">
                 <div class="art art-cabana" aria-hidden="true">
@@ -365,7 +377,7 @@
             <article class="card card-live" data-tilt data-game="eco" data-fresh="1" data-genre="exploracao">
               <a
                 class="card-hit"
-                href="https://kt3746.github.io/grokbot-eco/?v=202610052100"
+                href="https://kt3746.github.io/grokbot-eco/?v=202610060530"
                 aria-labelledby="title-eco"
                target="_blank" rel="noopener noreferrer">
                 <div class="art art-eco" aria-hidden="true">
@@ -392,7 +404,7 @@
             <article class="card card-live" data-tilt data-game="fronteira" data-fresh="1" data-genre="fronteira">
               <a
                 class="card-hit"
-                href="https://kt3746.github.io/grokbot-fronteira/?v=202610052110"
+                href="https://kt3746.github.io/grokbot-fronteira/?v=202610060540"
                 aria-labelledby="title-fronteira"
                target="_blank" rel="noopener noreferrer">
                 <div class="art art-fronteira" aria-hidden="true">
@@ -424,7 +436,7 @@
       </p>
     </footer>
 
-    <script src="app.js?v=54"></script>
-    <script type="module" src="js/bg3d.js?v=54"></script>
+    <script src="app.js?v=55"></script>
+    <script type="module" src="js/bg3d.js?v=55"></script>
   </body>
 </html>

@@ -199,3 +199,29 @@ main,
     font-size: 0.6rem;
   }
 }
+
+/* v55 — wave 4: sort bar + favs + Continuar blurb */
+@media (pointer: coarse) {
+  .hub-sort-label {
+    font-size: 0.62rem;
+  }
+
+  .hub-continuar-blurb {
+    font-size: 0.9rem;
+  }
+
+  .fav-btn {
+    top: 0.55rem;
+    right: 0.55rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .hub-sortbar {
+    gap: 0.45rem;
+  }
+
+  .hub-continuar-label {
+    font-size: 0.64rem;
+  }
+}
