@@ -1,6 +1,12 @@
 (() => {
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  const haptic = (ms = 12) => {
+    try {
+      if (navigator.vibrate) navigator.vibrate(ms);
+    } catch (_) {}
+  };
+
   /* First-visit tip — dismiss once via localStorage */
   const TIP_KEY = "sala-hub-tip-dismissed-v1";
   const tip = document.getElementById("hub-tip");
@@ -16,6 +22,7 @@
     const dismiss = () => {
       tip.hidden = true;
       tip.setAttribute("hidden", "");
+      haptic(8);
       try {
         localStorage.setItem(TIP_KEY, "1");
       } catch (_) {}
@@ -57,6 +64,52 @@
     } catch (_) {}
   };
 
+  const gameTitle = (card) => {
+    const h3 = card?.querySelector("h3");
+    return h3 ? h3.textContent.trim() : "";
+  };
+
+  const playLinkFor = (card) => {
+    if (!card) return null;
+    return (
+      card.querySelector("a.btn-primary") ||
+      card.querySelector("a.btn-celular") ||
+      card.querySelector("a.card-hit") ||
+      card.querySelector("a[href]")
+    );
+  };
+
+  /* ---- Wave 3: Continuar (último jogado) ---- */
+  const paintContinuar = (data) => {
+    const strip = document.getElementById("hub-continuar");
+    const nameEl = document.getElementById("hub-continuar-name");
+    const btn = document.getElementById("hub-continuar-btn");
+    if (!strip || !nameEl || !btn) return;
+
+    const lastId = data?.last;
+    const card = lastId
+      ? document.querySelector(`.card-live[data-game="${CSS.escape(lastId)}"]`)
+      : null;
+    const link = playLinkFor(card);
+    const title = gameTitle(card);
+
+    if (!lastId || !card || !link || !title) {
+      strip.hidden = true;
+      strip.setAttribute("hidden", "");
+      return;
+    }
+
+    nameEl.textContent = title;
+    strip.hidden = false;
+    strip.removeAttribute("hidden");
+    btn.onclick = () => {
+      haptic(18);
+      markPlayed(lastId);
+      const href = link.getAttribute("href");
+      if (href) window.open(href, "_blank", "noopener,noreferrer");
+    };
+  };
+
   const markPlayed = (gameId) => {
     if (!gameId) return;
     const data = readPlayed();
@@ -65,6 +118,7 @@
     data.last = gameId;
     writePlayed(data);
     paintPlayed(data);
+    paintContinuar(data);
   };
 
   const paintPlayed = (data) => {
@@ -111,7 +165,21 @@
     }
   };
 
-  paintPlayed(readPlayed());
+  /* ---- Wave 3: selo Novo nos cards data-fresh ---- */
+  document.querySelectorAll('.card-live[data-fresh="1"]').forEach((card) => {
+    const meta = card.querySelector(".card-meta");
+    if (!meta || meta.querySelector(".fresh-badge")) return;
+    const badge = document.createElement("span");
+    badge.className = "fresh-badge";
+    badge.textContent = "Novo";
+    const genre = meta.querySelector(".genre");
+    if (genre) genre.insertAdjacentElement("afterend", badge);
+    else meta.prepend(badge);
+  });
+
+  const playedNow = readPlayed();
+  paintPlayed(playedNow);
+  paintContinuar(playedNow);
 
   document.querySelectorAll(".card-live[data-game]").forEach((card) => {
     const gameId = card.getAttribute("data-game");
@@ -119,6 +187,7 @@
       link.addEventListener(
         "click",
         () => {
+          haptic(10);
           markPlayed(gameId);
         },
         { passive: true }
@@ -127,8 +196,27 @@
   });
 
   /* ---- Wave 2: genre filter chips + Surpresa ---- */
+  /* ---- Wave 3: contagem do filtro ---- */
   const chips = document.querySelectorAll(".genre-chips .chip");
   const gridItems = document.querySelectorAll(".grid-live > li");
+  const filterCount = document.getElementById("hub-filter-count");
+
+  const updateFilterCount = (genre) => {
+    if (!filterCount) return;
+    const visible = [...gridItems].filter((li) => !li.hidden).length;
+    const total = gridItems.length;
+    if (genre === "todos" || visible === total) {
+      filterCount.hidden = true;
+      filterCount.setAttribute("hidden", "");
+      return;
+    }
+    filterCount.textContent =
+      visible === 1
+        ? "Mostrando 1 jogo neste gênero"
+        : `Mostrando ${visible} jogos neste gênero`;
+    filterCount.hidden = false;
+    filterCount.removeAttribute("hidden");
+  };
 
   const applyFilter = (genre) => {
     gridItems.forEach((li) => {
@@ -141,30 +229,38 @@
         card.toggleAttribute("aria-hidden", !show);
       }
     });
+    updateFilterCount(genre);
   };
 
   chips.forEach((chip) => {
     chip.addEventListener("click", () => {
       const genre = chip.getAttribute("data-filter") || "todos";
+      haptic(8);
       chips.forEach((c) => {
         const on = c === chip;
         c.classList.toggle("is-active", on);
         c.setAttribute("aria-pressed", on ? "true" : "false");
       });
       applyFilter(genre);
+      // Keep active chip in view on horizontal scroll
+      try {
+        chip.scrollIntoView({ inline: "center", block: "nearest", behavior: reduce ? "auto" : "smooth" });
+      } catch (_) {}
     });
   });
 
   const surpresa = document.getElementById("hub-surpresa");
   if (surpresa) {
     surpresa.addEventListener("click", () => {
-      const visible = [...document.querySelectorAll(".grid-live > li:not([hidden]) .card-live[data-game]")];
+      const visible = [
+        ...document.querySelectorAll(".grid-live > li:not([hidden]) .card-live[data-game]"),
+      ];
       if (!visible.length) return;
+      haptic(20);
       const pick = visible[Math.floor(Math.random() * visible.length)];
       const gameId = pick.getAttribute("data-game");
       markPlayed(gameId);
 
-      // Prefer primary play link
       let link =
         pick.querySelector("a.btn-primary") ||
         pick.querySelector("a.card-hit") ||
@@ -191,8 +287,10 @@
 
     const spawnRipple = (event) => {
       const box = card.getBoundingClientRect();
-      const x = (event.clientX ?? event.touches?.[0]?.clientX ?? box.left + box.width / 2) - box.left;
-      const y = (event.clientY ?? event.touches?.[0]?.clientY ?? box.top + box.height / 2) - box.top;
+      const x =
+        (event.clientX ?? event.touches?.[0]?.clientX ?? box.left + box.width / 2) - box.left;
+      const y =
+        (event.clientY ?? event.touches?.[0]?.clientY ?? box.top + box.height / 2) - box.top;
       const rip = document.createElement("span");
       rip.className = "card-ripple";
       rip.style.left = `${x}px`;

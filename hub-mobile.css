@@ -171,3 +171,31 @@ main,
     margin-bottom: 1.25rem;
   }
 }
+
+
+/* v53 — wave 3: Continuar sticky stack + chip rail clearance */
+@media (pointer: coarse) {
+  .hub-continuar {
+    margin-top: 0.25rem;
+  }
+
+  .hub-toolbar + .hub-filter-count + .hub-continuar,
+  .hub-filter-count + .hub-continuar {
+    top: calc(3.5rem + env(safe-area-inset-top, 0px));
+  }
+
+  .genre-chips {
+    margin-inline: -0.15rem;
+    padding-inline: 0.15rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .hub-continuar-name {
+    font-size: clamp(1.4rem, 7vw, 1.75rem);
+  }
+
+  .fresh-badge {
+    font-size: 0.6rem;
+  }
+}
