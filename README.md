@@ -22,7 +22,7 @@ Se você clicar em **Jogar**, sai desta página e entra no jogo (nova aba).
 | MERCADINHO | https://kt3746.github.io/grokbot-mercadinho/?v=202610052020 |
 | 1945 | https://kt3746.github.io/grokbot-1945/?v=202610052100 |
 | POLÍGONO | https://kt3746.github.io/grokbot-poligono/?v=202610052100 |
-| MEMÓRIUM | https://kt3746.github.io/grokbot-memorium/?v=202610020137 |
+| MEMÓRIUM | https://kt3746.github.io/grokbot-memorium/?v=202610052130 |
 | CABANA DE GUERRA | https://kt3746.github.io/grokbot-cabana-de-guerra/?v=202610052046 |
 | ECO | https://kt3746.github.io/grokbot-eco/?v=202610052100 |
 | FRONTEIRA | https://kt3746.github.io/grokbot-fronteira/?v=202610052110 |
