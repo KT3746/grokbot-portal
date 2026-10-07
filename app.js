@@ -7,8 +7,8 @@
     } catch (_) {}
   };
 
-  /* First-visit tip — dismiss once (v2 = onda 4 copy) */
-  const TIP_KEY = "sala-hub-tip-dismissed-v2";
+  /* First-visit tip: dismiss once (v3 = onda 5 copy) */
+  const TIP_KEY = "sala-hub-tip-dismissed-v3";
   const tip = document.getElementById("hub-tip");
   if (tip) {
     let dismissed = false;
@@ -191,8 +191,8 @@
         const n = data.ids.length;
         note.textContent =
           n === 1
-            ? "1 jogo tocado hoje — destaque suave nos cards."
-            : `${n} jogos tocados hoje — destaque suave nos cards.`;
+            ? "1 jogo tocado hoje: destaque suave nos cards."
+            : `${n} jogos tocados hoje: destaque suave nos cards.`;
         note.hidden = false;
         note.removeAttribute("hidden");
       } else {
@@ -301,7 +301,7 @@
     if (genre === "favoritos") {
       filterCount.textContent =
         visible === 0
-          ? "Nenhum favorito ainda — toque no ★ do card"
+          ? "Nenhum favorito ainda: toque no ★ do card"
           : visible === 1
             ? "Mostrando 1 favorito"
             : `Mostrando ${visible} favoritos`;
