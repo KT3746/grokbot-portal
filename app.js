@@ -7,8 +7,8 @@
     } catch (_) {}
   };
 
-  /* First-visit tip: dismiss once (v3 = onda 5 copy) */
-  const TIP_KEY = "sala-hub-tip-dismissed-v3";
+  /* First-visit tip: dismiss once (v4 = onda 6 copy) */
+  const TIP_KEY = "sala-hub-tip-dismissed-v4";
   const tip = document.getElementById("hub-tip");
   if (tip) {
     let dismissed = false;
@@ -201,6 +201,16 @@
       }
     }
   };
+
+  /* ---- Onda 6: linha de novidade em cada carta (data-novo) ---- */
+  document.querySelectorAll(".card-live[data-novo]").forEach((card) => {
+    const body = card.querySelector(".blurb");
+    if (!body || card.querySelector(".novo-line")) return;
+    const line = document.createElement("p");
+    line.className = "novo-line";
+    line.textContent = "✦ Novo: " + card.getAttribute("data-novo");
+    body.after(line);
+  });
 
   /* ---- Wave 3: selo Novo nos cards data-fresh ---- */
   document.querySelectorAll('.card-live[data-fresh="1"]').forEach((card) => {
