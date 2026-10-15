@@ -2102,3 +2102,9 @@ main,
     animation: none;
   }
 }
+
+/* Onda 6: linha de novidade na carta */
+.novo-line { margin: 0.15rem 0 0.55rem; font-size: 0.78rem; font-weight: 700; line-height: 1.3; color: #7ef0c2;
+  background: linear-gradient(90deg, rgba(92,225,230,.14), transparent); border-left: 2px solid #5ce1e6; padding: 0.25rem 0.5rem; border-radius: 0 8px 8px 0; }
+.card-live:hover .novo-line { color: #b6fff0; }
+@media (max-width: 520px) { .novo-line { font-size: 0.74rem; } }
