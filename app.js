@@ -8,7 +8,7 @@
   };
 
   /* First-visit tip: dismiss once (v4 = onda 6 copy) */
-  const TIP_KEY = "sala-hub-tip-dismissed-v4";
+  const TIP_KEY = "sala-hub-tip-dismissed-v5";
   const tip = document.getElementById("hub-tip");
   if (tip) {
     let dismissed = false;
