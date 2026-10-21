@@ -10,7 +10,7 @@
     <meta name="mobile-web-app-capable" content="yes" />
     <meta
       name="description"
-      content="Sala de Jogos: portal com links para títulos originais. TOP RELÂMPAGO, KART, TETROK, LUTA, MERCADINHO, 1945, POLÍGONO, MEMÓRIUM, CABANA DE GUERRA, ECO e FRONTEIRA."
+      content="Sala de Jogos: portal com links para títulos originais. TOP RELÂMPAGO, KART, TETROK, LUTA, MERCADINHO, 1945, POLÍGONO, MEMÓRIUM, CABANA DE GUERRA, ECO, FRONTEIRA, XADREZÃO e ATIRADOR DE ELITE."
     />
     <meta property="og:title" content="Sala de Jogos" />
     <meta
@@ -27,12 +27,12 @@
       href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=58" />
-    <link rel="stylesheet" href="hub-mobile.css?v=58" />
+    <link rel="stylesheet" href="styles.css?v=59" />
+    <link rel="stylesheet" href="hub-mobile.css?v=59" />
     <script type="importmap">
       {
         "imports": {
-          "three": "./js/vendor/three.module.js?v=58"
+          "three": "./js/vendor/three.module.js?v=59"
         }
       }
     </script>
@@ -73,7 +73,7 @@
       <section id="biblioteca" class="library" aria-labelledby="live-heading">
         <div class="section-head">
           <h2 id="live-heading">Disponível agora</h2>
-          <p class="section-note">12 jogos no ar. Toque na carta para jogar (abre em nova aba). Cards com selo <strong>Novo</strong> receberam a onda 6.</p>
+          <p class="section-note">14 jogos no ar. Toque na carta para jogar (abre em nova aba). Cards com selo <strong>Novo</strong> receberam a onda 6.</p>
         </div>
 
         <p class="mobile-play-note" role="note">
@@ -115,6 +115,7 @@
             <button type="button" class="chip" data-filter="sobrevivencia" aria-pressed="false">Sobrevivência</button>
             <button type="button" class="chip" data-filter="exploracao" aria-pressed="false">Exploração</button>
             <button type="button" class="chip" data-filter="fronteira" aria-pressed="false">Fronteira</button>
+            <button type="button" class="chip" data-filter="tabuleiro" aria-pressed="false">Tabuleiro</button>
           </div>
           <button type="button" class="btn-surpresa" id="hub-surpresa" aria-label="Abrir um jogo aleatório">Surpresa</button>
         </div>
@@ -456,6 +457,60 @@
               </a>
             </article>
           </li>
+
+          <li>
+            <article class="card card-live" data-tilt data-game="xadrezao" data-fresh="1" data-novo="Jogo novo: xadrez contra o computador ou com um amigo" data-genre="tabuleiro">
+              <a
+                class="card-hit"
+                href="https://kt3746.github.io/grokbot-xadrez/?v=202610201430"
+                aria-labelledby="title-xadrezao"
+               target="_blank" rel="noopener noreferrer">
+                <div class="art art-xadrez" aria-hidden="true">
+                  <span class="board"></span>
+                  <span class="glow"></span>
+                  <span class="king"></span>
+                  <span class="pawn"></span>
+                </div>
+                <div class="card-body">
+                  <div class="card-meta">
+                    <span class="genre">Tabuleiro</span>
+                    <span class="status status-live">No ar</span>
+                  </div>
+                  <h3 id="title-xadrezao">XADREZÃO</h3>
+                  <p class="blurb">Xadrez bonito no celular. Contra o computador ou com um amigo.</p>
+                  <span class="btn btn-primary" aria-hidden="true">Jogar</span>
+                </div>
+              </a>
+            </article>
+          </li>
+
+          <li>
+            <article class="card card-live" data-tilt data-game="atirador-elite" data-fresh="1" data-novo="Jogo novo: sniper 3D" data-genre="tiro">
+              <a
+                class="card-hit"
+                href="https://kt3746.github.io/grokbot-atirador/?v=1.6.0"
+                aria-labelledby="title-atirador"
+               target="_blank" rel="noopener noreferrer">
+                <div class="art art-atirador" aria-hidden="true">
+                  <span class="dusk"></span>
+                  <span class="skyline"></span>
+                  <span class="scope"></span>
+                  <span class="cross-h"></span>
+                  <span class="cross-v"></span>
+                  <span class="dot"></span>
+                </div>
+                <div class="card-body">
+                  <div class="card-meta">
+                    <span class="genre">Tiro 3D</span>
+                    <span class="status status-live">No ar</span>
+                  </div>
+                  <h3 id="title-atirador">ATIRADOR DE ELITE</h3>
+                  <p class="blurb">Mire com calma. Um tiro, um alvo. Sniper em 3D.</p>
+                  <span class="btn btn-primary" aria-hidden="true">Jogar</span>
+                </div>
+              </a>
+            </article>
+          </li>
         </ul>
       </section>
     </main>
@@ -466,7 +521,7 @@
       </p>
     </footer>
 
-    <script src="app.js?v=58"></script>
-    <script type="module" src="js/bg3d.js?v=58"></script>
+    <script src="app.js?v=59"></script>
+    <script type="module" src="js/bg3d.js?v=59"></script>
   </body>
 </html>
