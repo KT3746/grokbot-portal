@@ -170,6 +170,8 @@ class PortalBg {
     const h = Math.max(1, window.innerHeight);
     this.camera.aspect = w / h;
     this.camera.updateProjectionMatrix();
+    // Celular em pé: formas mais para trás (menores e apagadas pela névoa), longe do texto.
+    if (this.world) this.world.position.z = w / h < 0.8 ? -5 : 0;
     this.renderer.setSize(w, h, false);
   }
 
