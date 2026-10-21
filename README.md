@@ -26,6 +26,8 @@ Se você clicar em **Jogar**, sai desta página e entra no jogo (nova aba).
 | CABANA DE GUERRA | https://kt3746.github.io/grokbot-cabana-de-guerra/?v=202610142225 |
 | ECO | https://kt3746.github.io/grokbot-eco/?v=202610142240 |
 | FRONTEIRA | https://kt3746.github.io/grokbot-fronteira/?v=202610142255 |
+| XADREZÃO | https://kt3746.github.io/grokbot-xadrez/?v=202610201430 |
+| ATIRADOR DE ELITE | https://kt3746.github.io/grokbot-atirador/?v=1.6.0 |
 
 ## Arquivos
 
