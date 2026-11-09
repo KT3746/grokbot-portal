@@ -2254,3 +2254,20 @@ main,
   0%, 100% { opacity: 0.55; }
   50% { opacity: 1; }
 }
+
+
+/* ===== Portal onda sync: selo Novo mais claro no celular ===== */
+@media (max-width: 720px) {
+  .card[data-fresh="1"] .badge-novo,
+  .card[data-fresh="1"]::after {
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+  }
+  .chip {
+    min-height: 40px;
+    padding-inline: 0.9rem;
+  }
+}
+.tip strong {
+  color: #ffe566;
+}
