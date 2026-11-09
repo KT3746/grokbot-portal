@@ -1,3 +1,9 @@
+## Sync onda
+
+- Selos **Novo** e `?v=` atualizados nos 14 jogos
+- Dica do hub renovada
+- Chips maiores no celular
+
 # Sala de Jogos
 
 Portal em português (PT-BR) com **somente links** para os jogos.
