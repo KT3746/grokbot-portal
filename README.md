@@ -1,8 +1,7 @@
-## Sync onda
+## Onda 8 (?v=64)
 
-- Selos **Novo** e `?v=` atualizados nos 14 jogos
-- Dica do hub renovada
-- Chips maiores no celular
+- Selo **Novo** só nos 11 jogos da onda 8 (LUTA, TOP RELÂMPAGO, CABANA, ECO, POLÍGONO, MEMÓRIUM, KART, TETROK, MERCADINHO, 1945, FRONTEIRA), com a linha "✦ Novo" de cada um
+- Links com os `?v=` novos de cada jogo; CAPITÃO BALA, XADREZÃO e ATIRADOR seguem sem selo
 
 # Sala de Jogos
 
@@ -20,20 +19,21 @@ Se você clicar em **Jogar**, sai desta página e entra no jogo (nova aba).
 
 | Jogo | Endereço |
 | --- | --- |
-| TOP RELÂMPAGO (celular) | https://kt3746.github.io/grokbot-top-relampago/celular/?v=202610142210 |
-| TOP RELÂMPAGO (PC) | https://kt3746.github.io/grokbot-top-relampago/pc/?v=202610142210 |
-| KART | https://kt3746.github.io/grokbot-kart/?v=202610142050 |
-| TETROK | https://kt3746.github.io/grokbot-tetrok/?v=202610142110 |
-| LUTA | https://kt3746.github.io/grokbot-luta/?v=202610142155 |
-| MERCADINHO | https://kt3746.github.io/grokbot-mercadinho/?v=202610142125 |
-| 1945 | https://kt3746.github.io/grokbot-1945/?v=202610142140 |
-| POLÍGONO | https://kt3746.github.io/grokbot-poligono/?v=202610142310 |
-| MEMÓRIUM | https://kt3746.github.io/grokbot-memorium/?v=202610142325 |
-| CABANA DE GUERRA | https://kt3746.github.io/grokbot-cabana-de-guerra/?v=202610142225 |
-| ECO | https://kt3746.github.io/grokbot-eco/?v=202610142240 |
-| FRONTEIRA | https://kt3746.github.io/grokbot-fronteira/?v=202610142255 |
-| XADREZÃO | https://kt3746.github.io/grokbot-xadrez/?v=202610201430 |
-| ATIRADOR DE ELITE | https://kt3746.github.io/grokbot-atirador/?v=1.6.0 |
+| TOP RELÂMPAGO (celular) | https://kt3746.github.io/grokbot-top-relampago/celular/?v=202611122200 |
+| TOP RELÂMPAGO (PC) | https://kt3746.github.io/grokbot-top-relampago/pc/?v=202611122200 |
+| KART | https://kt3746.github.io/grokbot-kart/?v=202611122338 |
+| TETROK | https://kt3746.github.io/grokbot-tetrok/?v=202611122359 |
+| LUTA | https://kt3746.github.io/grokbot-luta/?v=202611122130 |
+| MERCADINHO | https://kt3746.github.io/grokbot-mercadinho/?v=202611130015 |
+| 1945 | https://kt3746.github.io/grokbot-1945/?v=202611130030 |
+| POLÍGONO | https://kt3746.github.io/grokbot-poligono/?v=202611122330 |
+| MEMÓRIUM | https://kt3746.github.io/grokbot-memorium/?v=202611122345 |
+| CABANA DE GUERRA | https://kt3746.github.io/grokbot-cabana-de-guerra/?v=202611122230 |
+| ECO | https://kt3746.github.io/grokbot-eco/?v=202611122300 |
+| FRONTEIRA | https://kt3746.github.io/grokbot-fronteira/?v=202611130045 |
+| CAPITÃO BALA | https://kt3746.github.io/grokbot-capitao-bala/?v=202611091600 |
+| XADREZÃO | https://kt3746.github.io/grokbot-xadrez/?v=202611091555 |
+| ATIRADOR DE ELITE | https://kt3746.github.io/grokbot-atirador/?v=1.8.0 |
 
 ## Arquivos
 
